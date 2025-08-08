@@ -200,7 +200,7 @@ const OurSolutions = () => {
         </div>
 
         {/* Solution Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* HRX Solution */}
           <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
             <div className="flex flex-col items-center space-y-4">
