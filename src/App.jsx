@@ -1,11 +1,14 @@
 import Ifca from './components/Ifca';
+import {BrowserRouter} from 'react-router-dom'
 import './App.css'
 
 function App() {
 
 return (
     <div>
-      <Ifca />
+      <BrowserRouter>
+        <Ifca />
+      </BrowserRouter>
     </div>
   );
 }

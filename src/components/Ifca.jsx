@@ -1,6 +1,45 @@
 import React, { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
 import { Building2, Hotel, Hammer, Contact2 } from 'lucide-react';
 import { Users, Globe, Lightbulb} from 'lucide-react';
+import ifcaImage from '../assets/ifca.jpg';
+import malaysiaBanner from '../assets/Malaysia.png';
+import chinaFlag from '../assets/china.png';
+import malaysiaFlag from '../assets/malaysia_flag.png';
+import singaporeFlag from '../assets/singapore_flag.png';
+import indonisiaFlag from '../assets/indonesia_flag.png';
+import companyLogo1 from '../assets/logo-customers-01.png';
+import companyLogo2 from '../assets/logo-customers-02.png';
+import companyLogo3 from '../assets/logo-customers-03.png';
+import companyLogo4 from '../assets/logo-customers-04.png';
+import companyLogo5 from '../assets/logo-customers-05.png';
+import companyLogo6 from '../assets/logo-customers-06.png';
+import constructionImage1 from '../assets/construction1.png';
+import constructionImage2 from '../assets/construction2.png';
+import constructionImage3 from '../assets/construction3.png';
+import articlesImage1 from '../assets/articles1.png';
+import articlesImage2 from '../assets/articles2.png';
+import articlesImage3 from '../assets/articles3.png';
+import eVoicingImage3 from '../assets/e-invoicing-article3.png';
+import propertyImage1 from '../assets/property1.png';
+import propertyImage2 from '../assets/property2.png';
+import propertyImage3 from '../assets/property3.png';
+import hospitalImage1 from '../assets/hospital1.png';
+import hospitalImage2 from '../assets/hospital2.png';
+import hospitalImage3 from '../assets/hospital3.png';
+import hrImage1 from '../assets/hr1.png';
+import hrImage2 from '../assets/hr2.png';
+import hrImage3 from '../assets/hr3.png';
+import eventImage1 from '../assets/events1.png';
+import eventImage2 from '../assets/events2.png';
+import eventImage3 from '../assets/events3.png';
+import eventImage4 from '../assets/events4.png';
+import eventImage5 from '../assets/events5.png';
+import eventImage6 from '../assets/events6.png';
+import newsImage1 from '../assets/news1.png';
+import newsImage2 from '../assets/news2.png';
+import newsImage3 from '../assets/news3.jpg';
+
 
 const Ifca = () => {
 
@@ -37,18 +76,18 @@ const HeroSection = () => {
           Empowering the businesses of today<br />with the tools of tomorrow
         </p>
         <div className="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="bg-[#11245f] text-white px-6 py-3 rounded-md font-medium hover:opacity-90 transition"
           >
             BE OUR PARTNER
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            to="/contact"
             className="bg-[#ff9900] text-white px-6 py-3 rounded-md font-medium hover:opacity-90 transition"
           >
             OUR SOLUTIONS
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -95,7 +134,7 @@ const TeaBanner = () => {
     <section className="w-full bg-white py-8 px-4">
       <div className="max-w-screen-xl mx-auto">
         <img
-          src="https://ifca.asia/wp-content/uploads/2025/03/Malaysia-TEA-gray-2025-2.png"
+          src={malaysiaBanner}
           alt="Malaysia TEA gray 2025"
           className="w-full h-auto object-contain max-h-[300px] md:max-h-[400px] lg:max-h-[150px]"
           loading="lazy"
@@ -125,7 +164,7 @@ const WhyIFCA = () => {
           <div className="w-full">
             <div className="">
               <img
-                src="https://ifca.asia/wp-content/uploads/2025/01/office-worker-manager-analyze-financial-report-paper-harmony-workplace.jpg"
+                src={ifcaImage}
                 alt="Office workers collaborating"
                 className="w-xl h-full"
               />
@@ -212,12 +251,12 @@ const OurSolutions = () => {
                 A cloud-based Human Resource Management Solution (HRMS) that enables employees to manage all HR-related business functions simultaneously across all companies even from a mobile device.
               </p>
             </div>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="mt-4 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-orange-500 hover:text-orange-700 transition-colors duration-200"
             >
               Learn More
-            </a>
+            </Link>
           </div>
 
           {/* HotelX Solution */}
@@ -231,12 +270,12 @@ const OurSolutions = () => {
                 An award-winning mobile internet hotel management solution that simplifies management, operations and most importantly, your guest experience.
               </p>
             </div>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="mt-4 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-orange-500 hover:text-orange-700 transition-colors duration-200"
             >
               Learn More
-            </a>
+            </Link>
           </div>
 
           {/* PropertyX Solution */}
@@ -250,12 +289,12 @@ const OurSolutions = () => {
                 PropertyX is a cloud-based solution that enables developers to oversee their project progress, automate bookings and provide real-time insights for better decision making.
               </p>
             </div>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="mt-4 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-orange-500 hover:text-orange-700 transition-colors duration-200"
             >
               Learn More
-            </a>
+            </Link>
           </div>
 
           {/* ContractX Solution */}
@@ -269,12 +308,12 @@ const OurSolutions = () => {
                 A construction management solution that helps analyse data in real-time, monitor site conditions, and facilitates efficient and productive management.
               </p>
             </div>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="mt-4 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-orange-500 hover:text-orange-700 transition-colors duration-200"
             >
               Learn More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -388,26 +427,22 @@ const GlobalPresence = () => {
     {
       name: 'Malaysia',
       officeCount: '6 Offices',
-      flagSrc: 'https://i.etsystatic.com/32106414/r/il/fca6aa/4684500526/il_fullxfull.4684500526_rhiy.jpg', 
-      href: 'https://ifca.asia/malaysia-office/',
+      flagSrc: malaysiaFlag, 
     },
     {
       name: 'Singapore',
       officeCount: '1 Office',
-      flagSrc: 'https://www.flagcolorcodes.com/images/jpg/singapore.jpg',
-      href: 'https://ifca.asia/singapore/',
+      flagSrc: singaporeFlag,
     },
     {
       name: 'China',
       officeCount: '5 Offices',
-      flagSrc: 'https://www.flagcolorcodes.com/images/jpg/china.jpg',
-      href: 'https://ifca.asia/china/',
+      flagSrc: chinaFlag,
     },
     {
       name: 'Indonesia',
       officeCount: '1 Office',
-      flagSrc: 'https://wallpapercave.com/wp/wp2134638.jpg',
-      href: 'https://ifca.asia/indonesia/',
+      flagSrc: indonisiaFlag,
     },
   ];
 
@@ -428,10 +463,9 @@ const GlobalPresence = () => {
         {/* Country Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {countries.map((country, index) => (
-            <a
+            <div
               key={index}
-              rel="noopener noreferrer"
-              className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col items-center space-y-4"
+              className="bg-grey-600 rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col items-center space-y-4"
             >
               <img
                 src={country.flagSrc}
@@ -440,7 +474,7 @@ const GlobalPresence = () => {
               />
               <h3 className="text-lg font-semibold text-gray-800">{country.name}</h3>
               <p className="text-gray-600 text-sm">{country.officeCount}</p>
-            </a>
+            </div>
           ))}
         </div>
       </div>
@@ -452,12 +486,12 @@ const GlobalPresence = () => {
 
 const CompaniesTransformed = () => {
   const companies = [
-    { name: 'Company 1', logo: 'https://ifca.asia/wp-content/uploads/2025/01/logo-customers-01.png' },
-    { name: 'Company 2', logo: 'https://ifca.asia/wp-content/uploads/2025/01/logo-customers-02.png' },
-    { name: 'Company 3', logo: 'https://ifca.asia/wp-content/uploads/2025/01/logo-customers-03.png' },
-    { name: 'Company 4', logo: 'https://ifca.asia/wp-content/uploads/2025/01/logo-customers-04.png' },
-    { name: 'Company 5', logo: 'https://ifca.asia/wp-content/uploads/2025/01/logo-customers-05.png' },
-    { name: 'Company 6', logo: 'https://ifca.asia/wp-content/uploads/2025/01/logo-customers-06.png' },
+    { name: 'Company 1', logo: companyLogo1 },
+    { name: 'Company 2', logo: companyLogo2 },
+    { name: 'Company 3', logo: companyLogo3 },
+    { name: 'Company 4', logo: companyLogo4 },
+    { name: 'Company 5', logo: companyLogo5 },
+    { name: 'Company 6', logo: companyLogo6 },
   ];
 
   return (
@@ -498,19 +532,19 @@ const CompaniesTransformed = () => {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-${companies.length * 128}px);
-          }
+    <style>{`
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
         }
-        .animate-scroll {
-          animation: scroll 20s linear infinite;
+        100% {
+          transform: translateX(-${companies.length * 128}px);
         }
-      `}</style>
+      }
+      .animate-scroll {
+        animation: scroll 20s linear infinite;
+      }
+    `}</style>
     </section>
   );
 };
@@ -525,120 +559,102 @@ const Articles = () => {
       {
         title: "Trends in the Construction Industry You Need to Look Out For in 2025",
         date: "July 1, 2025",
-        image: "https://ifca.asia/wp-content/uploads/2025/07/Trends-in-the-Construction-Industry-You-Need-to-Look-Out-For-in-2025_thumbnail-scaled-1.png",
-        link: "https://ifca.asia/blog/trends-in-the-construction-industry-you-need-to-look-out-for-in-2025/"
+        image: constructionImage1,
       },
       {
         title: "Mastering Construction Budget Control: Tools and Techniques",
         date: "February 24, 2025",
-        image: "https://ifca.asia/wp-content/uploads/2025/02/Mastering-Construction-Budget-Control-Tools-and-Techniques_thumbnail.png",
-        link: "https://ifca.asia/blog/construction-budget-control/"
+        image:constructionImage2,
       },
       {
         title: "Automation of the 5-Way Match Process in the Construction Cycle: Enhancing Efficiency and Accuracy",
         date: "January 21, 2025",
-        image: "https://ifca.asia/wp-content/uploads/2025/01/Automation-of-the-5-Way-Match-Process-in-the-Construction-Cycle-Enhancing-Efficiency-and-Accuracy_thumbnail.png",
-        link: "https://ifca.asia/blog/5-way-match-process/"
+        image: constructionImage3,
       }
     ],
     'articles': [
       {
         title: "E-Invoicing Malaysia Explained: Who Issues, Manages & Oversees It?",
         date: "July 21, 2025",
-        image: "http://ifca.asia/wp-content/uploads/2025/07/E-Invoicing-Malaysia-Explained-Who-Issues-Manages-Oversees-It_thumbnail-scaled.png",
-        link: "https://ifca.asia/blog/digital-transformation-strategies/"
+        image: articlesImage1,
       },
       {
         title: "Is E-Invoicing Mandatory in Malaysia?",
         date: "July 11, 2025",
-        image: "http://ifca.asia/wp-content/uploads/2025/07/Is-E-Invoicing-Mandatory-In-Malaysia_thumbnail.png",
-        link: "https://ifca.asia/blog/future-of-work-hybrid-models/"
+        image: articlesImage2,
       },
       {
         title: "EPF for Foreign Workers? Here’s What Employers Need to Know",
         date: "July 4, 2025",
-        image: "http://ifca.asia/wp-content/uploads/2025/07/EPF-for-Foreign-Workers-Heres-What-Employers-Need-to-Know_thumbnail-08-scaled-1.png",
-        link: "https://ifca.asia/blog/sustainable-business-practices/"
+        image: articlesImage3,
       }
     ],
     'e-invoicing-articles': [
       {
         title: "E-Invoicing Malaysia Explained: Who Issues, Manages & Oversees It?",
         date: "July 21, 2025",
-        image: "http://ifca.asia/wp-content/uploads/2025/07/E-Invoicing-Malaysia-Explained-Who-Issues-Manages-Oversees-It_thumbnail-scaled.png",
-        link: "https://ifca.asia/blog/e-invoicing-trends-2025/"
+        image: articlesImage2,
       },
       {
         title: "Is E-Invoicing Mandatory in Malaysia?",
         date: "July 11, 2025",
-        image: "http://ifca.asia/wp-content/uploads/2025/07/E-Invoicing-Malaysia-Explained-Who-Issues-Manages-Oversees-It_thumbnail-scaled.png",
-        link: "https://ifca.asia/blog/benefits-e-invoicing/"
+        image: articlesImage3,
       },
       {
         title: "What is the E-Invoicing Process?",
         date: "June 16, 2025",
-        image: "http://ifca.asia/wp-content/uploads/2025/07/E-Invoicing-Malaysia-Explained-Who-Issues-Manages-Oversees-It_thumbnail-scaled.png",
-        link: "https://ifca.asia/blog/implementing-e-invoicing/"
+        image: eVoicingImage3,
       }
     ],
     'property-articles': [
       {
         title: "Enhancing Customer Experience in Real Estate Through Technology",
         date: "July 25, 2024",
-        image: "http://ifca.asia/wp-content/uploads/2024/05/PropertyX-Thumbnail-23.5.24.png",
-        link: "https://ifca.asia/blog/smart-property-management/"
+        image: propertyImage1,
       },
       {
         title: "Embracing e-Invoicing for Property Developers in Malaysia: A Comprehensive Guide",
         date: "July 1, 2024",
-        image: "http://ifca.asia/wp-content/uploads/2024/06/Embracing-E-Invoicing-for-Property_Thumbnail-2.png",
-        link: "https://ifca.asia/blog/maximizing-rental-income/"
+        image: propertyImage2,
       },
       {
         title: "Overcoming the Challenges in Lead Nurturing in Real Estate",
         date: "May 27, 2024",
-        image: "http://ifca.asia/wp-content/uploads/2024/05/PropertyX-Thumbnail-23.5.24.png",
-        link: "https://ifca.asia/blog/proptech-rise/"
+        image: propertyImage3,
       }
     ],
     'hospitality-articles': [
       {
         title: "The Untold Benefits of E-Invoicing For Hotels and How to Switch Over",
         date: "May 19, 2025",
-        image: "http://ifca.asia/wp-content/uploads/2025/05/The-Untold-Benefits-of-E-Invoicing-For-Hotels-and-How-to-Switch-Over_thumbnail-scaled-1.png",
-        link: "https://ifca.asia/blog/guest-experience-hotelx/"
+        image: hospitalImage1,
       },
       {
         title: "It’s The Holidays – Manage Your Guests with HotelX",
         date: "March 24, 2025",
-        image: "http://ifca.asia/wp-content/uploads/2025/03/Its-The-Holidays-Manage-Your-Guests-with-HotelX_cover-1-scaled.png",
-        link: "https://ifca.asia/blog/streamlining-hotel-operations/"
+        image: hospitalImage2,
       },
       {
         title: "Future of Hospitality – New Changes in The New Age",
         date: "March 10, 2025",
-        image: "http://ifca.asia/wp-content/uploads/2025/03/Blog-Post-Thumbnail-Size-04-1-scaled.png",
-        link: "https://ifca.asia/blog/ai-hospitality-management/"
+        image: hospitalImage3,
       }
     ],
     'hr-articles': [
       {
         title: "EPF for Foreign Workers? Here’s What Employers Need to Know",
         date: "July 4, 2025",
-        image: "http://ifca.asia/wp-content/uploads/2025/07/EPF-for-Foreign-Workers-Heres-What-Employers-Need-to-Know_thumbnail-08-scaled-1.png",
-        link: "https://ifca.asia/blog/hrx-revolutionizing-hr/"
+        image: hrImage1,
       },
       {
         title: "Expanding to Malaysia? Here are Things You Need to Know About Their Law",
         date: "May 5, 2025",
-        image: "http://ifca.asia/wp-content/uploads/2025/05/Expanding-to-Malaysia-Here-are-Things-You-Need-to-Know-About-Their-Law_Thumbnail.png",
-        link: "https://ifca.asia/blog/ai-recruitment/"
+        image: hrImage2,
       },
       {
         title: "Why Smart Companies Are Ditching Traditional Attendance for Mobile Flexibility",
         date: "April 18, 2025",
-        image: "http://ifca.asia/wp-content/uploads/2025/04/Asset-10-1.png",
-        link: "https://ifca.asia/blog/remote-team-engagement/"
+        image: hrImage3,
       }
     ]
   };
@@ -683,23 +699,22 @@ const Articles = () => {
         {/* Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {articlesData[activeTab]?.map((article) => (
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-64 md:h-64">
+            <div key={article.id || article.title} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative">
                     <img
                       src={article.image}
                       alt={article.title}
-                      className="w-full h-full "
+                      className=""
                       loading="lazy"
                       decoding="async"
                     />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-opacity duration-300"></div>
                 </div>
                 <div className="p-4 mt-5">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2 group-hover:text-orange-500 transition-colors duration-200">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-2 hover:text-orange-500 transition-colors duration-200">
                     {article.title}
                   </h3>
-                  <div className="flex items-center text-sm text-gray-500">
-                    <i className="fa fa-calendar-o mr-1"></i>
+                  <div className="flex items-center text-sm font-semibold text-gray-500">
                     {article.date}
                   </div>
                 </div>
@@ -716,34 +731,28 @@ const Articles = () => {
 
 const EVENTS = [
   {
-    img: "https://ifca.asia/wp-content/uploads/2025/01/mastering-e-invoicing-in-hospitality-seminar-26.9.24-02-1024x1024.png",
+    img: eventImage1,
     alt: "Mastering E-Invoicing in Hospitality Seminar",
-    link: "https://www.linkedin.com/posts/ifca_%F0%9D%90%93%F0%9D%90%A1%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%A4-%F0%9D%90%98%F0%9D%90%A8%F0%9D%90%AE-%F0%9D%90%9F%F0%9D%90%A8%F0%9D%90%AB-%F0%9D%90%80%F0%9D%90%AD%F0%9D%90%AD%F0%9D%90%9E%F0%9D%90%A7%F0%9D%90%9D%F0%9D%90%A2-activity-7244972413682098176-jb_K?utm_source=share&utm_medium=member_desktop",
   },
   {
-    img: "https://ifca.asia/wp-content/uploads/2025/01/E-Invoicing-Event-Kuantan-pahang-21.5.24.png",
+    img: eventImage2,
     alt: "E-Invoicing Event Kuantan, Pahang",
-    link: "https://www.linkedin.com/posts/ifca_e-invoice-kuantan-activity-7199326103713271809-v7A1?utm_source=share&utm_medium=member_desktop",
   },
   {
-    img: "https://ifca.asia/wp-content/uploads/2025/01/Navigating-e-invoice-seminar.png",
+    img: eventImage3,
     alt: "Navigating E-Invoice Seminar",
-    link: "https://ifca.asia/blog/ifcaxpkf/",
   },
   {
-    img: "https://ifca.asia/wp-content/uploads/2025/01/E-invoice-sarawak-1.3.24-1024x1024.png",
+    img: eventImage4,
     alt: "E-Invoice Sarawak",
-    link: "https://www.linkedin.com/posts/propertyxifca_another-enlightening-day-at-our-forum-on-activity-7170320139337355264-ruTu?utm_source=share&utm_medium=member_desktop",
   },
   {
-    img: "https://ifca.asia/wp-content/uploads/2025/01/E-invoice-JB-27.2.24-1024x1024.png",
+    img: eventImage5,
     alt: "E-Invoice JB",
-    link: "https://www.linkedin.com/posts/ifca_what-an-insightful-day-it-has-been-at-our-activity-7168889627855056896-337H?utm_source=share&utm_medium=member_desktop",
   },
   {
-    img: "https://ifca.asia/wp-content/uploads/2025/01/IFCA-with-KPF-Event-30.1.24-01-01-1024x1024.png",
+    img: eventImage6,
     alt: "IFCA with KPF Event",
-    link: "https://ifca.asia/blog/penang-forum-recap-e-invoicing-simplified/",
   },
 ];
 
@@ -763,13 +772,13 @@ const Events = () => {
                 alt={event.alt}
                 className="mb-4 object-cover w-[320px] h-[320px] rounded-lg shadow-md"
               />
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 rel="noopener noreferrer"
                 className="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-orange-400 to-orange-500 text-white font-semibold rounded hover:scale-105 transition"
               >
                 READ MORE
-              </a>
+              </Link>
             </div>
           ))}
         </div>
@@ -781,30 +790,27 @@ const Events = () => {
 
 const NEWS = [
   {
-    img: "https://ifca.asia/wp-content/uploads/2025/07/IFCA-HRX-HREdge-Collab-Banner-thumb-300x201.png",
+    img: newsImage1,
     title: "Strategic Partnership: HRedge and IFCA Collaborate to Elevate HR Solutions in Malaysia",
     excerpt:
       "Strategic Partnership: HRedge and IFCA Collaborate to Elevate HR Solutions in Malaysia MALAYSIA – July 14, 2025 – Malaysian businesses today face growing pressure to digitalise HR operations while staying",
-    link: "",
     date: "July 14, 2025",
     badge: "All",
   },
   {
-    img: "https://ifca.asia/wp-content/uploads/2025/03/cover_photo-300x169.png",
+    img: newsImage2,
     title: "IFCA MSC Berhad Won Prestigious Award in Malaysia Technology Excellence Awards 2025",
     excerpt:
       "IFCA MSC Berhad Won Prestigious Award in Malaysia Technology Excellence Awards 2025 MALAYSIA – March 21, 2025 – IFCA MSC Berhad, an industry leader in property management, succeeded in taking",
-    link: "https://ifca.asia/blog/malaysia-technology-excellence-awards-2025/",
     date: "March 21, 2025",
     badge: "ContractX",
   },
   {
-    img: "https://ifca.asia/wp-content/uploads/2025/03/IFCA-QSI-300x225.jpg",
+    img: newsImage3,
     title:
       "IFCA and Quantity Solutions Inc. (QSI) Announce Strategic Partnership to Drive Digital Transformation in the Philippines",
     excerpt:
       "IFCA and Quantity Solutions Inc. (QSI) Announce Strategic Partnership to Drive Digital Transformation in the Philippines Kuala Lumpur, 17 March 2025 – IFCA, a leading provider of enterprise software solutions,",
-    link: "https://ifca.asia/blog/ifca-and-quantity-solutions/",
     date: "March 17, 2025",
     badge: "All",
   },
@@ -823,36 +829,29 @@ const NewsSection = () => {
               key={index}
               className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col"
             >
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
                 <img
                   src={item.img}
                   alt={item.title}
                   className="w-full h-[200px] object-cover"
                 />
-              </a>
               <div className="px-6 py-4 flex-1 flex flex-col">
                 <span className="text-sm font-semibold text-orange-500 uppercase mb-2">
                   {item.badge}
                 </span>
                 <h3 className="text-lg font-semibold mb-2">
-                  <a
-                    href={item.link}
-                    className="hover:text-orange-500 transition"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <h2 className="hover:text-orange-500 transition">
                     {item.title}
-                  </a>
+                  </h2>
                 </h3>
                 <p className="text-sm text-gray-600 flex-1">{item.excerpt}</p>
                 <div className="mt-4 flex items-center justify-between">
                   <span className="text-xs text-gray-500">{item.date}</span>
-                  <a
-                    href="#contact"
+                  <Link
+                    to="/contact"
                     className="text-sm text-orange-500 hover:underline font-semibold"
                   >
                     Read More »
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
